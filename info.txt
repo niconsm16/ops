@@ -1,0 +1,71 @@
+Estos son los datos que devuelve la respuesta simple (sin usar .text())
+Se acceden mediante Symbol
+
+Response {
+  [Symbol(realm)]: null,
+  [Symbol(state)]: {
+    aborted: false,
+    rangeRequested: false,
+    timingAllowPassed: true,
+    requestIncludesCredentials: true,
+    type: 'default',
+    status: 200,
+    timingInfo: {
+      startTime: 58.017399966716766,
+      redirectStartTime: 0,
+      redirectEndTime: 0,
+      postRedirectStartTime: 58.017399966716766,
+      finalServiceWorkerStartTime: 0,
+      finalNetworkResponseStartTime: 0,
+      finalNetworkRequestStartTime: 0,
+      endTime: 0,
+      encodedBodySize: 0,
+      decodedBodySize: 0,
+      finalConnectionTimingInfo: null
+    },
+    cacheState: '',
+    statusText: 'OK',
+    headersList: HeadersList {
+      cookies: [Array],
+      [Symbol(headers map)]: [Map],
+      [Symbol(headers map sorted)]: null
+    },
+    urlList: [ [URL] ],
+    body: { stream: undefined }
+  },
+  [Symbol(headers)]: HeadersList {
+    cookies: [
+      'wikia_beacon_id=AcRwsPFrsg; domain=.fandom.com; path=/; expires=Fri, 22 Mar 2024 21:43:04 GMT; SameSite=None; Secure;',
+      '_b2=71xzpLBnq_.1695591784279; domain=.fandom.com; path=/; expires=Tue, 23 Sep 2025 21:43:04 GMT; SameSite=None; Secure;',
+      'Geo={%22region%22:%22C%22%2C%22city%22:%22buenos aires%22%2C%22country_name%22:%22argentina%22%2C%22country%22:%22AR%22%2C%22continent%22:%22SA%22}; path=/; domain=.fandom.com; SameSite=None; Secure;'
+    ],
+    [Symbol(headers map)]: Map(25) {
+      'connection' => [Object],
+      'content-length' => [Object],
+      'content-type' => [Object],
+      'x-content-type-options' => [Object],
+      'content-language' => [Object],
+      'report-to' => [Object],
+      'nel' => [Object],
+      'content-security-policy' => [Object],
+      'content-security-policy-report-only' => [Object],
+      'last-modified' => [Object],
+      'x-request-id' => [Object],
+      'content-encoding' => [Object],
+      'x-envoy-upstream-service-time' => [Object],
+      'x-datacenter' => [Object],
+      'x-cacheable' => [Object],
+      'accept-ranges' => [Object],
+      'date' => [Object],
+      'age' => [Object],
+      'x-served-by' => [Object],
+      'x-cache' => [Object],
+      'x-cache-hits' => [Object],
+      'x-timer' => [Object],
+      'vary' => [Object],
+      'set-cookie' => [Object],
+      'cache-control' => [Object]
+    },
+    [Symbol(headers map sorted)]: null
+  }
+}
