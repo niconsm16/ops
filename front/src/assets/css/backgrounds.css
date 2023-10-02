@@ -1,0 +1,33 @@
+@layer background {
+
+    .logo {
+        width: inherit;
+        height: 20vh;
+    }
+
+    .background__size {
+        width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background: linear-gradient(180deg, rgba(142, 171, 228, 1) 0%, rgba(30, 100, 211, 1) 35%, rgba(8, 119, 183, 1) 100%);
+    }
+
+    .background__cel {
+        display: flex;
+        width: inherit;
+        height: fit-content;
+        padding: 1rem 0;
+        align-items: center;
+        flex-direction: column;
+
+        &>h2 {
+            color: white;
+            font-family: var(--font--elite);
+            font-variant: small-caps;
+            font-size: 3rem;
+            margin: 1rem 0;
+            filter: invert(1) drop-shadow(3px 3px 0px white) drop-shadow(-1px -3px 0px white);
+            -webkit-filter: invert(1) drop-shadow(3px 3px 0px white) drop-shadow(-1px -3px 0px white);
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@layer cards {
+    .cards__background--cel {
+        display: flex;
+        width: 90%;
+        height: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        overflow-x: hidden;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        & h2 {
+            font-size: 8rem;
+            transform: scaleX(.65);
+            -webkit-transform: scaleX(.65);
+            -moz-transform: scaleX(.65);
+            -ms-transform: scaleX(.65);
+            -o-transform: scaleX(.65);
+        }
+
+        & h3 {
+            width: max-content;
+            font-size: 5rem;
+            text-wrap: nowrap;
+            transform: scaleX(.5);
+            -webkit-transform: scaleX(.5);
+            -moz-transform: scaleX(.5);
+            -ms-transform: scaleX(.5);
+            -o-transform: scaleX(.5);
+        }
+
+        & h4 {
+            font-family: var(--font__vrinda);
+            font-size: 2.75rem;
+        }
+
+        & h5 {
+            font-size: 3rem;
+            letter-spacing: 1rem;
+            transform: scaleX(.75);
+            -webkit-transform: scaleX(.75);
+            -moz-transform: scaleX(.75);
+            -ms-transform: scaleX(.75);
+            -o-transform: scaleX(.75);
+        }
+
+        & h6 {
+            font-family: var(--font__oswald);
+            font-size: 1rem;
+        }
+
+        & div img[data-bounty="belly"] {
+            margin-right: .5rem;
+        }
+
+        & img[data-image="photo"] {
+            background: green;
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            object-position: top;
+            border: 3.5px solid var(--wanted__color);
+        }
+
+        & img[data-side="left"] {
+            position: relative;
+            right: -10px;
+        }
+
+        & img[data-side="right"] {
+            position: relative;
+            height: 100%;
+            left: 5px;
+        }
+
+        & div[data-secondary="data"] {
+            align-self: end;
+            margin: 0 0 .5rem 0;
+        }
+    }
+
+    .cards__template--cel {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        background: var(--wanted__background);
+        grid-template-rows: 9rem 20rem 12rem 10%;
+        grid-template-columns: 3rem 1fr 1fr 1fr 3rem;
+        grid-template-areas: "empty-left wanted wanted wanted empty-right""empty-left img img img empty-right""or-left primary primary primary or-right""or-left secondary secondary or-marine or-marine";
+        color: var(--wanted__color);
+        filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 75%));
+        -webkit-filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 75%));
+
+        border-radius: .5rem;
+        -webkit-border-radius: .5rem;
+        -moz-border-radius: .5rem;
+        -ms-border-radius: .5rem;
+        -o-border-radius: .5rem;
+    }
+}

@@ -1,5 +1,6 @@
 import regexp from './../config/regexp.mjs'
-
+import config from './../config/config.mjs'
+import * as language from './../config/language.mjs'
 
 /**
  * 
@@ -31,37 +32,21 @@ export const tableDepuration = (rows, attr, except) => {
 
 
 /**
- * 
+ * A searcher in a long string
  * @param {string} data block obtained for the page 
+ * @param {object} schema a schema of selection start and array of regexps
  * @returns {string} link of the character image
  */
-export const searchImage = (data, selection) => {
+export const searchElement = (data, { start, regexp: re }) => {
 
-    const indexStart = data.indexOf(selection) + selection.length
-    const cutData = data.substring(indexStart, indexStart + 400)
+    const indexStart = data.indexOf(start) + start.length
+    const indexEnd = indexStart + config.defaultValues.captureLength
+    let target = data.substring(indexStart, indexEnd)
 
-    const indexEnd = cutData.indexOf('.png')
-    const link = cutData.slice(0, indexEnd + 4)
+    for (const e of re) {
+        target = regexp[e].exec(target)
+        target = target !== null ? target[0] : target
+    }
 
-    return link
-}
-
-/**
- * Search Debut in Manga and Anime
- * @param {string} data block obtained for the page 
- * @param {string} selection to search and limit the search 
- * @returns {[string, string]} an array with debut of manga - episode 
- */
-export const searchDebut = (data, selection) => {
-
-    const indexStart = data.indexOf(selection) + selection.length
-    const content = data.substring(indexStart, indexStart + 400)
-
-    let res = regexp.chapter.exec(content)
-    let res2 = regexp.number.exec(res)[0]
-
-    let res3 = regexp.episode.exec(content)
-    let res4 = regexp.number.exec(res3)[0]
-
-    return [res2, res4]
+    return target || language[config.language].noInfo
 }

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@font-face {
+    font-family: 'Vrinda';
+    src: url('/src/assets/fonts/Vrinda\ Regular.ttf');
+}
+
+@Font-face {
+    font-family: 'Vani Bold';
+    src: url('/src/assets/fonts/Vanib.ttf');
+}

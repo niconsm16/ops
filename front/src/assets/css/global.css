@@ -1,0 +1,41 @@
+@layer global {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --font--noto: 'Noto Sans', sans-serif;
+        --font--fuggles: 'Fuggles', cursive;
+        --font--elite: 'Special Elite', cursive;
+        --font__vrinda: 'Vrinda', sans-serif;
+        --font__vani: 'Vani Bold', sans-serif;
+        --font__oswald: 'Oswald', sans-serif;
+        --wanted__background: #ddcab1;
+        --wanted__color: #29140b;
+        --back__light: rgba(142, 171, 228, 1);
+        --back__dark: rgba(30, 100, 211, 1);
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    *::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background: var(--back__light)
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--back__dark)
+    }
+
+    #root {
+        overflow-x: hidden;
+    }
+
+}
